@@ -25,7 +25,6 @@ function valuesInObject(obj) {
 
 
   // sol 2
-  // let value = Object.keys(obj);
   let arr = Object.values(obj);
 
 
