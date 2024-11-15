@@ -13,6 +13,17 @@ console.log(arrayConverter(["apple", "banana", "potato", "banana"])); // => {app
 
 function arrayConverter(array) {
   // Your code here
+  const result = {};
+
+  for (let element of array) {
+    if (result[element] === undefined) {
+      result[element] = 1; // Initialize count if the key is not present
+    } else {
+      result[element]++; // Increment count if the key is already present
+    }
+  }
+
+  return result;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
