@@ -29,6 +29,19 @@ console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 
 function countScores(people) {
   // Your code here
+  const scoreMap = {};
+  for (const person of people) {
+    const { name, score } = person;
+
+    // Add the score to the existing value or initialize it if it doesn't exist
+    if (scoreMap[name] !== undefined) {
+      scoreMap[name] += score;
+    } else {
+      scoreMap[name] = score;
+    }
+  }
+
+  return scoreMap;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
